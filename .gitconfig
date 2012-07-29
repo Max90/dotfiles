@@ -28,3 +28,6 @@
 
 [heroku]
   account = main
+
+[github]
+  user = alexbel
