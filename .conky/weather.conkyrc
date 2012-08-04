@@ -37,7 +37,7 @@ minimum_size 215 0
 maximum_width 215
 
 # Draw shades?
-draw_shades yes
+draw_shades no
 
 # Draw outlines?
 draw_outline no
@@ -104,9 +104,8 @@ text_buffer_size 2048
 # stuff because of an argument
 
 # stuff after 'TEXT' will be formatted on screen
-
 TEXT
-${color0}Calendar ${hr 2}$color
+${color0}Calendar  ${hr 2}$color
 ${voffset 2}${goto 20}${color grey60}${time %A  %d %b. %Y}
 ${voffset 2}${goto 30}${color grey60}${execpi 60 VinDSL_Cal_8=`date +%-d`; cal -m | sed -e '1d' -e 's/\<'"$VinDSL_Cal_8"'\>/${color cc0000}&${color grey60}/'}
 ${color0}Weather Carrboro ${hr 2}
