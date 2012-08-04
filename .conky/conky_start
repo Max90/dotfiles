@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sleep 5 &
+
+conky -c ~/.conky/info.conkyrc &
+#conky -c ~/.conky/logs.conkyrc &
+conky -c ~/.conky/network.conkyrc &
+conky -c ~/.conky/weather.conkyrc &
+conky -c ~/.conky/sys.conkyrc
