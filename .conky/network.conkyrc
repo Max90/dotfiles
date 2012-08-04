@@ -123,10 +123,6 @@ ${color0}Total down: ${color grey60}${totaldown wlan0} ${goto 180}${color0}Total
 ${color0}Inbound connections: ${color grey60}${tcp_portmon 1 32767 count}
 ${color0}Remote Service ${alignr}Port
 ${color grey60}${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
-${color grey60}${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
-${color grey60}${tcp_portmon 1 32767 rhost 2} ${alignr} ${tcp_portmon 1 32767 lservice 2}
-${color grey60}${tcp_portmon 1 32767 rhost 3} ${alignr} ${tcp_portmon 1 32767 lservice 3}
-${color grey60}${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 4}
 ${color0}Outbound connections: ${color grey60}${tcp_portmon 32768 61000 count}
 ${color0}Remote Service ${alignr}Port
 ${color grey60}${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}

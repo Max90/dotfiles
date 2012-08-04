@@ -14,3 +14,7 @@ for dotfile in $(ls -A); do
       ln -Fis "$PWD/$dotfile" $HOME;;
   esac
 done
+
+# create simlinks
+ln -s ~/.dotfiles/.conky/conky_start ~/bin/conky_start
+ln -s ~/.dotfiles/.conky/conky_start ~/.kde4/Autostart/conky_start

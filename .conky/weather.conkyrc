@@ -29,9 +29,6 @@ update_interval 3
 # Set to zero to run forever.
 total_run_times 0
 
-# Create own window instead of using desktop (required in nautilus)
-own_window no
-
 # Use double buffering (reduces flicker, may not work for everyone)
 double_buffer yes
 
