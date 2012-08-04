@@ -120,13 +120,21 @@ ${color0}${goto 20}Down speed: ${color grey60}${downspeed wlan0} ${goto 200}${co
 ${color grey60}${downspeedgraph wlan0 20,150 303030 00ff00} ${alignr}${color grey60}${upspeedgraph wlan0 20,150 303030 ff0000}
 ${color0}Total down: ${color grey60}${totaldown wlan0} ${goto 180}${color0}Total up: ${color grey60}${totalup wlan0}
 
-${color0}Inbound connections: ${color grey60}${tcp_portmon 1 32767 count}
-${color0}Remote Service ${alignr}Port
-${color grey60}${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
-${color0}Outbound connections: ${color grey60}${tcp_portmon 32768 61000 count}
-${color0}Remote Service ${alignr}Port
-${color grey60}${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
-${color grey60}${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
-${color grey60}${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
-${color grey60}${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
-${color grey60}${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}
+Activity:
+${color0}Proto  Foreign Address ${goto 270}Name
+${color grey60} ${execi 2 ~/.conky/scripts/netstat.sh 1 proto}${goto 63}${execi 2 ~/.conky/scripts/netstat.sh 1 address}${goto 230}${execi 2 ~/.conky/scripts/netstat.sh 1 name}
+${color grey60} ${execi 2 ~/.conky/scripts/netstat.sh 2 proto}${goto 63}${execi 2 ~/.conky/scripts/netstat.sh 2 address}${goto 230}${execi 2 ~/.conky/scripts/netstat.sh 2 name}
+${color grey60} ${execi 2 ~/.conky/scripts/netstat.sh 3 proto}${goto 63}${execi 2 ~/.conky/scripts/netstat.sh 3 address}${goto 230}${execi 2 ~/.conky/scripts/netstat.sh 3 name}
+${color grey60} ${execi 2 ~/.conky/scripts/netstat.sh 4 proto}${goto 63}${execi 2 ~/.conky/scripts/netstat.sh 4 address}${goto 230}${execi 2 ~/.conky/scripts/netstat.sh 4 name}
+${color grey60} ${execi 2 ~/.conky/scripts/netstat.sh 5 proto}${goto 63}${execi 2 ~/.conky/scripts/netstat.sh 5 address}${goto 230}${execi 2 ~/.conky/scripts/netstat.sh 5 name}
+
+#${color0}Inbound connections: ${color grey60}${tcp_portmon 1 32767 count}
+#${color0}Remote Service ${alignr}Port
+#${color grey60}${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
+#${color0}Outbound connections: ${color grey60}${tcp_portmon 32768 61000 count}
+#${color0}Remote Service ${alignr}Port
+#${color grey60}${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
+#${color grey60}${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
+#${color grey60}${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
+#${color grey60}${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
+#${color grey60}${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}
