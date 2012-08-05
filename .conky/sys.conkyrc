@@ -86,6 +86,7 @@ ${font Liberation Mono:bold:size=10}${color0}CPU Core 1: ${color grey60}${freq 1
 ${color grey60}${cpugraph cpu1 12,330 303030 467f77}
 ${color0}CPU Core 2: ${color grey60}${freq 2}MHz ${color0} Load: ${color grey60}${cpu cpu2}%${color0}${goto 260}Temp: ${color grey60}${exec sensors | grep 'Core 1' | cut -c18-19}°C
 ${color grey60}${cpugraph cpu2 12,330 303030 467f77}
+${color0}Fan speed: ${color grey60}${execi 3 cat /proc/acpi/ibm/fan | grep speed | awk '{print $2}'} RPM
 ${color0}Ram used:${color grey60} $mem / $memmax
 ${color0}Name${goto 179}PID${goto 234}CPU%${goto 297}MEM
       Top Cpu${color grey60}${font Liberation Mono:bold:size=9}
