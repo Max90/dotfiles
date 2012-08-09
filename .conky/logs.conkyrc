@@ -32,8 +32,8 @@ total_run_times 0
 double_buffer yes
 
 # Minimum size of text area
-minimum_size 400 0
-maximum_width 600
+minimum_size 450 0
+maximum_width 1600
 
 draw_shades no
 
@@ -71,7 +71,7 @@ alignment bottom_left
 # Gap between borders of screen and text
 # same thing as passing -x at command line
 gap_x 15
-gap_y 20
+gap_y 40
 
 # Subtract file system buffers from used memory?
 no_buffers yes
@@ -103,4 +103,4 @@ text_buffer_size 2048
 # stuff after 'TEXT' will be formatted on screen
 TEXT
 ${color0}/var/log/messages
-${color grey60}${exec tail -n 4 /var/log/messages | fold -w110}
+${color grey60}${exec tail -n 5 /var/log/messages | fold -w210}
