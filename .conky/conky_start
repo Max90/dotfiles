@@ -2,7 +2,7 @@
 if ps aux | grep -v -e "grep" -e "bash" | grep "conky" >/dev/null;then
   echo 'exit';
 else
-  sleep 15 &
+  sleep 5
   if xrandr | grep "*" | grep 1920
   then
     # I have a second monitor 1920*1080. So, set conky config according to new resolution
