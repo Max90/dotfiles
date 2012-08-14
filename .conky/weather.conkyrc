@@ -105,9 +105,8 @@ text_buffer_size 2048
 
 # stuff after 'TEXT' will be formatted on screen
 TEXT
-${color0}Calendar  ${hr 2}$color
-${voffset 2}${goto 20}${color grey60}${time %A  %d %b. %Y}
-${voffset 2}${goto 30}${color grey60}${execpi 60 VinDSL_Cal_8=`date +%-d`; cal -m | sed -e '1d' -e 's/\<'"$VinDSL_Cal_8"'\>/${color cc0000}&${color grey60}/'}
+${color0}Calendar  ${hr 2}
+${voffset 2}${goto 30}${color grey60}${execpi 3600 DJS=`date +%_d`; cal -m | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color orange}'"$DJS"'${color grey60}'/}
 ${color0}Weather Carrboro ${hr 2}
 ${font weather:size=45}${alignr 30} ${lua_parse weather_icon /usr/bin/conkyweather "Carrboro,US"}${font}${voffset -50}
 ${color0}Temperature: ${goto 100}${color grey60}${execi 1800 /usr/bin/conkyweather "Carrboro,US" ct}
