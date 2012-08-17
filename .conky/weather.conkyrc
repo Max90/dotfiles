@@ -23,7 +23,7 @@ xftfont Liberation Mono:bold:size=10
 xftalpha 1
 
 # Update interval in seconds
-update_interval 3
+update_interval 600
 
 # This is the number of times Conky will update before quitting.
 # Set to zero to run forever.

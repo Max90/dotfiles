@@ -3,7 +3,7 @@ use_xft yes
 xftfont cure:size=6
 
 # Update interval in seconds
-update_interval 2
+update_interval 10
 
 # This is the number of times Conky will update before quitting.
 # Set to zero to run forever.
