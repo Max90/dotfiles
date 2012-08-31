@@ -109,10 +109,10 @@ ${color0}Calendar  ${hr 2}
 ${voffset 2}${goto 30}${color grey60}${execpi 3600 DJS=`date +%_d`; cal -m | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color orange}'"$DJS"'${color grey60}'/}
 ${color0}Weather Carrboro ${hr 2}
 ${font weather:size=45}${alignr 30} ${lua_parse weather_icon /usr/bin/conkyweather "Carrboro,US"}${font}${voffset -50}
-${color0}Temperature: ${goto 100}${color grey60}${execi 1800 /usr/bin/conkyweather "Carrboro,US" ct}
-${color0}Conditions: ${goto 100}${color grey60}${execi 1800 /usr/bin/conkyweather "Carrboro,US" cc}
-${color0}Humidity: ${goto 100}${color grey60}${execi 1800 /usr/bin/conkyweather "Carrboro,US" ch}
-${color0}Wind: ${goto 100}${color grey60}${execi 1800 /usr/bin/conkyweather "Carrboro,US" cw}
-${voffset 3}${offset 10}${color grey60}${execi 3600 /usr/bin/conkyweather "Carrboro,US" dl}
-${offset 22}${color grey60}${font weather:size=40}${execi 3600 /usr/bin/conkyweather "Carrboro,US" fcp}${font}
-${offset 15}${color grey60}${execi 3600 /usr/bin/conkyweather "Carrboro,US" fct}
+${color0}Temperature: ${goto 100}${color grey60}${execi 5000 /usr/bin/conkyweather "Carrboro,US" ct}
+${color0}Conditions: ${goto 100}${color grey60}${execi 5000 /usr/bin/conkyweather "Carrboro,US" cc}
+${color0}Humidity: ${goto 100}${color grey60}${execi 5000 /usr/bin/conkyweather "Carrboro,US" ch}
+${color0}Wind: ${goto 100}${color grey60}${execi 5000 /usr/bin/conkyweather "Carrboro,US" cw}
+${voffset 3}${offset 10}${color grey60}${execi 5000 /usr/bin/conkyweather "Carrboro,US" dl}
+${offset 22}${color grey60}${font weather:size=40}${execi 5000 /usr/bin/conkyweather "Carrboro,US" fcp}${font}
+${offset 15}${color grey60}${execi 5000 /usr/bin/conkyweather "Carrboro,US" fct}
