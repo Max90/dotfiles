@@ -106,7 +106,7 @@ text_buffer_size 2048
 # stuff after 'TEXT' will be formatted on screen
 TEXT
 ${color0}Calendar  ${hr 2}
-${voffset 2}${goto 30}${color grey60}${execpi 3600 DJS=`date +%_d`; cal -m | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color orange}'"$DJS"'${color grey60}'/}
+${voffset 3}${color grey60}${execpi 3600 VinDSL_Cal_8=`date +%-d`; cal -m | sed -e '1d' -e 's/\<'"$VinDSL_Cal_8"'\>/${color orange}&${color grey60}/'}
 #${color0}Weather Carrboro ${hr 2}
 #${texeci 500 bash /home/al/AccuW/acc_int_images}
 #${color0}Wind: ${color grey60}${execpi 600 sed -n '31p' /home/al/AccuW/curr_cond} ${execpi 600 sed -n '32p' /home/al/AccuW/curr_cond}${goto 220}${execpi 600 sed -n '1p' /home/al/AccuW/messages} ${image /home/al/AccuW/cc.png -p 175,160 -s 120x120}
