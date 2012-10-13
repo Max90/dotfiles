@@ -1,1 +1,2 @@
 alias be='bundle exec'
+alias gp='ps aux | grep -v "grep" | grep $1'

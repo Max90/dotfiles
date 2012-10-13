@@ -23,6 +23,13 @@
   changed   = green
   untracked = cyan
 
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  lg = log -p
+
 [core]
 	autocrlf = false
 
