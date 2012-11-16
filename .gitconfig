@@ -28,7 +28,7 @@
   ci = commit
   br = branch
   co = checkout
-  lg = log -p
+  lg = log --graph --pretty=format:'%Cred%h%Creset %an -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 
 [core]
 	autocrlf = false
