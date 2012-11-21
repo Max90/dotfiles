@@ -1,3 +1,21 @@
 alias be='bundle exec'
-alias gp='ps aux | head -1 && ps aux | grep -v "grep" | grep $1'
+alias gp='ps aux | grep -v grep | grep $1'
 alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
+# prepare to copy in vim
+alias tovim='sed "s/^/    /" | xclip -i'
+
+alias b='bash-it'
+
+alias ..='cd ..'         # Go up one directory
+alias ...='cd ../..'     # Go up two directories
+alias ....='cd ../../..' # Go up two directories
+alias -- -='cd -'        # Go back
+
+# Shell History
+alias h='history'
+
+# Tree
+if [ ! -x "$(which tree 2>/dev/null)" ]
+then
+  alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+fi
