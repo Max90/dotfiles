@@ -1,10 +1,9 @@
 alias be='bundle exec'
+alias bi='bundle install --without production'
 alias gp='ps aux | grep -v grep | grep $1'
 alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
 # prepare to copy in vim
 alias tovim='sed "s/^/    /" | xclip -i'
-
-alias b='bash-it'
 
 alias ..='cd ..'         # Go up one directory
 alias ...='cd ../..'     # Go up two directories
