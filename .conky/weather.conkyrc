@@ -107,18 +107,3 @@ text_buffer_size 2048
 TEXT
 ${color0}Calendar  ${hr 2}
 ${voffset 3}${color grey60}${execpi 3600 VinDSL_Cal_8=`date +%-d`; cal -m | sed -e '1d' -e 's/\<'"$VinDSL_Cal_8"'\>/${color orange}&${color grey60}/'}
-#${color0}Weather Carrboro ${hr 2}
-#${texeci 500 bash /home/al/AccuW/acc_int_images}
-#${color0}Wind: ${color grey60}${execpi 600 sed -n '31p' /home/al/AccuW/curr_cond} ${execpi 600 sed -n '32p' /home/al/AccuW/curr_cond}${goto 220}${execpi 600 sed -n '1p' /home/al/AccuW/messages} ${image /home/al/AccuW/cc.png -p 175,160 -s 120x120}
-#${color0}Humidity: ${color grey60}${execpi 600 sed -n '33p' /home/al/AccuW/curr_cond}
-#${color0}Dew point: ${color grey60}${execpi 600 sed -n '37p' /home/al/AccuW/curr_cond}°
-#${color0}Pressure: ${color grey60}${execpi 600 sed -n '34p' /home/al/AccuW/curr_cond}
-#${color0}Visibility: ${color grey60}${execpi 600 sed -n '38p' /home/al/AccuW/curr_cond}
-#${color0}Cloud cover: ${color grey60}${execpi 600 sed -n '35p' /home/al/AccuW/curr_cond}
-#${color0}Sunrise: ${color grey60}${execpi 600 sed -n '39p' /home/al/AccuW/curr_cond} ${goto 210}${color grey60}${execpi 600 sed -n '29p' /home/al/AccuW/curr_cond}° / ${execpi 600 sed -n '30p' /home/al/AccuW/curr_cond}°
-#${color0}Sunset: ${color grey60}${execpi 600 sed -n '40p' /home/al/AccuW/curr_cond}
-#${image /home/al/AccuW/6.png -p 8,280 -s 80x80} ${image /home/al/AccuW/11.png -p 110,280 -s 80x80} ${image /home/al/AccuW/16.png -p 209,280 -s 80x80}
-
-
-
-#${color grey60}${goto 32}${execpi 600 sed -n '5p' /home/al/AccuW/first_days | awk '{print tolower($0)}'}${goto 124}${execpi 600 sed -n '10p' /home/al/AccuW/first_days | awk '{print tolower($0)}'}${goto 230}${execpi 600 sed -n '15p' /home/al/AccuW/first_days | awk '{print tolower($0)}'}

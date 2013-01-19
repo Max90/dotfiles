@@ -108,7 +108,7 @@ text_buffer_size 2048
 # stuff after 'TEXT' will be formatted on screen
 
 TEXT
-${color0}Public IP: ${color grey60}${execi 3600 wget -O - http://automation.whatismyip.com/n09230945.asp | tail}
+${color0}Public IP: ${color grey60}${execi 3600 curl -s http://checkip.dyndns.org/ | awk '/:/ {print $6}' | cut -d "<" -f1 }
 ${color0}Gateway IP: ${color grey60}$gw_ip
 ${color0}DNS: ${color grey60}$nameserver
 ${if_up wlan0}${color0}Wi-fi IP: ${color grey60}${addr wlan0}
