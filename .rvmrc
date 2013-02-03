@@ -4,3 +4,5 @@ rvm_trust_rvmrcs_flag=1
 rvm_make_flags="-j 2"
 
 rvm_archflags="-arch x86_64"
+
+rvm_auto_reload_flag=2 # for silent auto reload

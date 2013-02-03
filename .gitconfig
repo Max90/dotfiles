@@ -17,6 +17,9 @@
   frag = magenta bold
   old  = red bold
   new  = green bold
+  plain = white dim
+  commit = yellow bold
+  func = green dim
 
 [color "status"]
   added     = yellow
