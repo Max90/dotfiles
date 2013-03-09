@@ -18,3 +18,11 @@ if [ ! -x "$(which tree 2>/dev/null)" ]
 then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
+
+# git
+alias gpu='git pull upstream master'
+alias gppu='git push upstream master'
+
+# zeus
+alias z='zeus'
+alias routes='zeus rake routes'
