@@ -31,6 +31,8 @@ test -s ~/.alias && . ~/.alias || true
 
 set -o vi
 
+shopt -s cdspell
+
 export EC2_HOME=/usr/lib/AmazonEC2/ec2-api-tools
 EC2_PRIVATE_KEY=~/.ec2/rghtcrwd/pk-XXXX.pem
 EC2_CERT=~/.ec2/rghtcrwd/cert-XXXX.pem
