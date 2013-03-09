@@ -42,3 +42,6 @@
 
 [github]
   user = alexbel
+
+[help]
+  autocorrect = 1
