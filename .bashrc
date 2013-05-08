@@ -43,3 +43,6 @@ EC2_URL=https://ec2.us-east-1d.amazonaws.com # default region, don't need to set
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_FREE_MIN=500000
 export RUBY_HEAP_MIN_SLOTS=40000
+
+source ~/.liquidprompt/liquidpromptrc-dist
+source ~/.liquidprompt/liquidprompt

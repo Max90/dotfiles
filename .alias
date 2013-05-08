@@ -23,6 +23,6 @@ fi
 alias gpu='git pull upstream master'
 alias gppu='git push upstream master'
 
-# zeus
-alias z='zeus'
-alias routes='zeus rake routes'
+# spring
+alias routes='spring rake routes'
+alias groute='spring rake routes | grep $1'
