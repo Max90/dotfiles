@@ -45,3 +45,7 @@
 
 [help]
   autocorrect = 1
+
+# remove lines below if you use Git 2.0
+[push]
+	default = simple
