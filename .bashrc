@@ -46,3 +46,6 @@ export RUBY_HEAP_MIN_SLOTS=40000
 
 source ~/.liquidprompt/liquidpromptrc-dist
 source ~/.liquidprompt/liquidprompt
+
+# spring temp folder
+export SPRING_TMP_PATH=~/tmp

@@ -26,3 +26,5 @@ alias gppu='git push upstream master'
 # spring
 alias routes='spring rake routes'
 alias groute='spring rake routes | grep $1'
+
+alias skype='xhost +local: && su skype -c skype'
