@@ -107,3 +107,5 @@ text_buffer_size 2048
 TEXT
 ${color0}Calendar  ${hr 2}
 ${voffset 3}${color grey60}${execpi 3600 VinDSL_Cal_8=`date +%-d`; cal -m | sed -e '1d' -e 's/\<'"$VinDSL_Cal_8"'\>/${color orange}&${color grey60}/'}
+${color0}${goto 0}Gmail: ${hr 2}
+${color0}${goto 0}${execpi 3600 ruby ~/.conky/scripts/gmail.rb} new emails
