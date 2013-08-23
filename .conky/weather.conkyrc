@@ -106,6 +106,14 @@ text_buffer_size 2048
 # stuff after 'TEXT' will be formatted on screen
 TEXT
 ${color0}Calendar  ${hr 2}
-${voffset 3}${color grey60}${execpi 3600 VinDSL_Cal_8=`date +%-d`; cal -m | sed -e '1d' -e 's/\<'"$VinDSL_Cal_8"'\>/${color orange}&${color grey60}/'}
-${color0}${goto 0}Gmail: ${hr 2}
-${color0}${goto 0}${execpi 3600 ruby ~/.conky/scripts/gmail.rb} new emails
+${goto 80}${voffset 3}${color grey60}${execpi 3600 VinDSL_Cal_8=`date +%-d`; cal -m | sed -e '1d' -e 's/\<'"$VinDSL_Cal_8"'\>/${color orange}&${color grey60}/'}
+${color0}Gmail: ${hr 2}
+${color gray60}${goto 20}${execpi 3600 ruby ~/.conky/scripts/gmail.rb} new emails
+
+${execpi 3600 ruby ~/.conky/scripts/weather.rb}
+${color0}Weather: ${execpi 3600 cat /tmp/weather.txt | sed -n 1p} ${hr 2}
+${goto 20}${color0}Sky ${goto 130}${color gray60}${execpi 3600 cat /tmp/weather.txt | sed -n 2p}
+${goto 20}${color0}Temperature ${goto 130}${color gray60}${execpi 3600 cat /tmp/weather.txt | sed -n 3p} °C
+${goto 20}${color0}Humidity ${goto 130}${color gray60}${execpi 3600 cat /tmp/weather.txt | sed -n 4p}
+${goto 20}${color0}Feels like ${goto 130}${color gray60}${execpi 3600 cat /tmp/weather.txt | sed -n 5p} °C
+${goto 20}${color0}Visibility ${goto 130}${color gray60}${execpi 3600 cat /tmp/weather.txt | sed -n 6p} km
