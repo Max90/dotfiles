@@ -32,4 +32,10 @@ alias groute='spring rake routes | grep $1'
 alias skype='xhost +local: && su skype -c skype'
 
 # Rspec
-alias parallel_rspec="SIMPLECOV_ENABLED=true rake parallel:spec[,,'--format ParallelTests::RSpec::SummaryLogger']"
+alias parallel_rspec="time SIMPLECOV_ENABLED=true rake parallel:spec[,,'--format ParallelTests::RSpec::SummaryLogger']"
+
+# rvm
+alias rvm_clean='rvm cleanup all'
+
+# rails
+alias railsnew='rails new $1 --database=postgresql --skip-bundle --skip-unit-test'
