@@ -111,11 +111,11 @@ TEXT
 ${color0}Public IP: ${color grey60}${execi 3600 curl -s http://checkip.dyndns.org/ | awk '/:/ {print $6}' | cut -d "<" -f1 }
 ${color0}Gateway IP: ${color grey60}$gw_ip
 ${color0}DNS: ${color grey60}$nameserver
-${if_up wlan0}${color0}Wi-fi IP: ${color grey60}${addr wlan0}
-${color0}Signal: ${color grey60}${wireless_link_qual_perc wlan0}${goto 95}% ${goto 112}${wireless_link_bar wlan0}${else}${color0}No wlan0$endif
-${color0}${goto 20}Down speed: ${color grey60}${downspeed wlan0} ${goto 200}${color0}Up speed: ${color grey60}${upspeed wlan0}
-${color grey60}${downspeedgraph wlan0 12,150 303030 00ff00} ${alignr}${color grey60}${upspeedgraph wlan0 12,150 303030 ff0000}
-${color0}Total down: ${color grey60}${totaldown wlan0} ${goto 180}${color0}Total up: ${color grey60}${totalup wlan0}
+${if_up wlp3s0}${color0}Wi-fi IP: ${color grey60}${addr wlp3s0}
+${color0}Signal: ${color grey60}${wireless_link_qual_perc wlp3s0}${goto 95}% ${goto 112}${wireless_link_bar wlp3s0}${else}${color0}No wlan0$endif
+${color0}${goto 20}Down speed: ${color grey60}${downspeed wlp3s0} ${goto 200}${color0}Up speed: ${color grey60}${upspeed wlp3s0}
+${color grey60}${downspeedgraph wlp3s0 12,150 303030 00ff00} ${alignr}${color grey60}${upspeedgraph wlp3s0 12,150 303030 ff0000}
+${color0}Total down: ${color grey60}${totaldown wlp3s0} ${goto 180}${color0}Total up: ${color grey60}${totalup wlp3s0}
 ${color0}Activity:  ${hr 2}
 ${color0}Inbound connections: ${color grey60}${tcp_portmon 1 32767 count}
 ${color0}Outbound connections: ${color grey60}${tcp_portmon 32768 61000 count}
