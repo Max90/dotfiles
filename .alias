@@ -43,3 +43,6 @@ alias railsnew='rails new $1 --database=postgresql --skip-bundle --skip-unit-tes
 # services
 alias pgstart='sudo systemctl start postgresql'
 alias pgstop='sudo systemctl stop postgresql'
+
+# ctags
+alias ctagit='ctags -R .'
