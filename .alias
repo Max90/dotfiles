@@ -38,7 +38,9 @@ alias parallel_rspec="time SIMPLECOV_ENABLED=true rake parallel:spec[,,'--format
 alias rvm_clean='rvm cleanup all'
 
 # rails
-alias railsnew='rails new $1 --database=postgresql --skip-bundle --skip-unit-test'
+function newproject(){
+  rails new "$1" --database=postgresql --skip-bundle --skip-test-unit
+}
 
 # services
 alias pgstart='sudo systemctl start postgresql'
