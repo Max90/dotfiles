@@ -1,8 +1,15 @@
-alias be='bundle exec'
-alias bi='bundle install --without production'
+## System
 alias gp='ps aux | grep -v grep | grep $1'
 alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
-alias annotate_models='annotate --exclude tests,fixtures,factories'
+alias h='history'
+alias skype='xhost +local: && su skype -c skype'
+
+# services
+alias pgstart='sudo systemctl start postgresql'
+alias pgstop='sudo systemctl stop postgresql'
+
+# ctags
+alias ctagit='ctags -R .'
 
 # prepare to copy in vim
 alias tovim='sed "s/^/    /" | xclip -i'
@@ -12,39 +19,28 @@ alias ...='cd ../..'     # Go up two directories
 alias ....='cd ../../..' # Go up two directories
 alias -- -='cd -'        # Go back
 
-# Shell History
-alias h='history'
-
-# Tree
+# tree
 if [ ! -x "$(which tree 2>/dev/null)" ]
 then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
 
-# git
-alias gpu='git pull upstream master'
-alias gppu='git push upstream master'
+
+## Rails
+alias be='bundle exec'
+alias bi='bundle install --without production'
+alias annotate_models='annotate --exclude tests,fixtures,factories'
+
+function newproject(){
+  rails new "$1" --database=postgresql --skip-bundle --skip-test-unit
+}
+
+# rvm
+alias rvm_clean='rvm cleanup all'
 
 # spring
 alias routes='spring rake routes'
 alias groute='spring rake routes | grep $1'
 
-alias skype='xhost +local: && su skype -c skype'
-
-# Rspec
+# rspec
 alias parallel_rspec="time SIMPLECOV_ENABLED=true rake parallel:spec[,,'--format ParallelTests::RSpec::SummaryLogger']"
-
-# rvm
-alias rvm_clean='rvm cleanup all'
-
-# rails
-function newproject(){
-  rails new "$1" --database=postgresql --skip-bundle --skip-test-unit
-}
-
-# services
-alias pgstart='sudo systemctl start postgresql'
-alias pgstop='sudo systemctl stop postgresql'
-
-# ctags
-alias ctagit='ctags -R .'
